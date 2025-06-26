@@ -1,0 +1,246 @@
+/* Custom CSS Styles */
+
+/* Define beige colors manually */
+:root {
+    --beige-50: #F9F6EE;
+    --beige-100: #F3EDE0;
+    --beige-200: #E7D5B7;
+    --beige-300: #DBBF94;
+    --beige-400: #CFA871;
+    --beige-600: #B8956B;
+    --beige-700: #9A7B56;
+    --beige-800: #7C6142;
+}
+
+/* Apply beige colors to specific elements */
+.bg-beige-50 {
+    background-color: var(--beige-50) !important;
+}
+
+.bg-beige-100 {
+    background-color: var(--beige-100) !important;
+}
+
+.bg-beige-200 {
+    background-color: var(--beige-200) !important;
+}
+
+.bg-beige-300 {
+    background-color: var(--beige-300) !important;
+}
+
+.bg-beige-400 {
+    background-color: var(--beige-400) !important;
+}
+
+.bg-beige-600 {
+    background-color: var(--beige-600) !important;
+}
+
+.bg-beige-700 {
+    background-color: var(--beige-700) !important;
+}
+
+.bg-beige-800 {
+    background-color: var(--beige-800) !important;
+}
+
+.text-beige-200 {
+    color: var(--beige-200) !important;
+}
+
+.border-beige-100 {
+    border-color: var(--beige-100) !important;
+}
+
+.border-beige-200 {
+    border-color: var(--beige-200) !important;
+}
+
+.border-beige-700 {
+    border-color: var(--beige-700) !important;
+}
+
+.hover\:bg-beige-50:hover {
+    background-color: var(--beige-50) !important;
+}
+
+.hover\:text-beige-200:hover {
+    color: var(--beige-200) !important;
+}
+
+.hover\:text-beige-600:hover {
+    color: var(--beige-600) !important;
+}
+
+/* Background gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #F9F6EE 0%, #E7D5B7 100%);
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Floating blob styles */
+.floating-blob {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* Floating accents */
+.floating-accent {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: float 4s ease-in-out infinite;
+}
+
+.accent-1 {
+    width: 20px;
+    height: 20px;
+    top: 20%;
+    left: 10%;
+    animation-delay: -1s;
+}
+
+.accent-2 {
+    width: 15px;
+    height: 15px;
+    bottom: 20%;
+    right: 15%;
+    animation-delay: -3s;
+}
+
+/* Floating text styles */
+.floating-text {
+    z-index: 10;
+}
+
+.floating-text-main {
+    font-weight: 300;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* Project card hover effects */
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Profile Image Hover Animation - Scale + Rotate */
+.profile-image {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.profile-image:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Subject popup styles */
+.subject-container {
+    position: relative;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #E7D5B7;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-top: 4px;
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CFA871;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #B8956B;
+}
+
+/* Focus styles for accessibility */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #CFA871;
+    outline-offset: 2px;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+    .floating-text-main {
+        font-size: 1.5rem;
+    }
+    
+    .accent-1,
+    .accent-2 {
+        display: none;
+    }
+}
+
+/* Animation for form success message */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#form-success:not(.hidden) {
+    animation: slideIn 0.3s ease-out;
+    :focus-visible {
+    outline: 3px solid #CFA871;
+    outline-offset: 3px;
+    transition: outline 0.2s ease-in-out;
+}
+a:hover,
+button:hover {
+    filter: brightness(90%);
+}
+    animation-fill-mode: forwards;
+    display: block;
+    background-color: var(--beige-100);
+    color: var(--beige-700);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
